@@ -1,0 +1,149 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.header {
+  background-color: rgb(65, 63, 63);
+  padding: 20px 0;
+  color: white;
+}
+
+.header_title {
+  margin: 0;
+  text-align: center;
+}
+
+.search_bar {
+  margin: 20px 0;
+  /* display: flex;
+  justify-content: center; */
+}
+
+.search_title {
+  font-size: 22px;
+  text-align: center;
+}
+
+.search_box {
+  display: flex;
+  justify-content: center;
+}
+.search_box input {
+  padding: 15px 18px;
+  max-width: 400px;
+  width: 100%;
+  background-color: rgb(234, 234, 234);
+  color: rgb(78, 78, 78);
+  border: none;
+  border-radius: 10px 0 0 10px;
+  transition: filter .3s;
+  font-size: 16px;
+}
+
+.search_box input:hover {
+  filter: contrast(.8);
+}
+
+.search_box button {
+  align-items: center;
+  background-color: green;
+  color: white;
+  border-radius: 0 10px 10px 0;
+  border: none;
+  display: flex;
+  padding: 0 10px;
+  cursor: pointer;
+  transition: filter .3s;
+  font-size: 16px;
+}
+
+.search_box button i {
+  padding-right: 5px;
+}
+
+.search_box button:hover {
+  filter: opacity(.8);
+}
+
+.cards_container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.card {
+  padding: 20px;
+  background-color: rgb(233, 233, 233);
+  border-radius: 10px;
+}
+
+.card_header {
+  display: flex;
+}
+
+.card_header img {
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+}
+
+.card_info {
+  margin-left: 20px;
+}
+
+.card_name {
+  font-weight: bold;
+  font-size: 20px;
+  margin: 5px 0;
+}
+
+.card_username {
+  font-weight: bold;
+    font-size: 14px;
+    color: gray;
+}
+
+.card_body {
+  display: flex;
+  margin-top: 20px;
+}
+
+.github_followers {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+
+.github_followers .count {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.github_followers .text {
+  color: gray;
+}
+
+@media (min-width: 730px) {
+  .cards_container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 1000px) {
+  .cards_container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
